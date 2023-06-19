@@ -11,9 +11,19 @@ public class FactorialProgram {
         int num = scanner.nextInt();
 
         int factorial = 1;
-        for (int i=1; i<=num; i++){
-            factorial*=i;
+
+        if (num <0) {
+            System.out.printf(num+" is Not Valid Number.");
+            factorial=num;
+        }else {
+            if (num > 0) {
+                for (int i = 1; i <= num; i++) {
+                    factorial *= i;
+                }
+            } else {
+                factorial = 0;
+            }
+            System.out.printf("The  Factorial " + num + " is : " + factorial);
         }
-        System.out.printf("is "+ factorial);
     }
 }
